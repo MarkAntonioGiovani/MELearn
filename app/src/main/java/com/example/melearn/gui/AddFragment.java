@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.melearn.MainActivity;
 import com.example.melearn.R;
 
 public class AddFragment extends Fragment {
@@ -28,9 +29,9 @@ public class AddFragment extends Fragment {
         deckNameInput = view.findViewById(R.id.edTxtName);
         deckDescriptionInput = view.findViewById(R.id.edTxtDescription);
         buttonAdd.setOnClickListener(v -> {
-            MainActivity;
-           deckName = deckNameInput.getText().toString();
-           deckDescription = deckDescriptionInput.getText().toString();
+            MainActivity.user.addDeck(deckNameInput.getText().toString(),
+                    deckDescriptionInput.getText().toString());
+            System.out.println(deckDescriptionInput.getText().toString());
         });
         return view;
     }
