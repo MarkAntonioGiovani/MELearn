@@ -14,23 +14,24 @@ import androidx.fragment.app.Fragment;
 import com.example.melearn.R;
 
 public class AddFragment extends Fragment {
-    private EditText deckName;
-    private EditText deckDescription;
-    private Button btnAdd;
+    String deckName;
+    String deckDescription;
+    private EditText deckNameInput;
+    private EditText deckDescriptionInput;
+    private Button buttonAdd;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Drin");
-            }
+        View view = inflater.inflate(R.layout.fragment_add, container, false);
+        buttonAdd = view.findViewById(R.id.btnAdd);
+        deckNameInput = view.findViewById(R.id.edTxtName);
+        deckDescriptionInput = view.findViewById(R.id.edTxtDescription);
+        buttonAdd.setOnClickListener(v -> {
+            MainActivity;
+           deckName = deckNameInput.getText().toString();
+           deckDescription = deckDescriptionInput.getText().toString();
         });
-
-
-
-
-        return inflater.inflate(R.layout.fragment_add, container, false);
+        return view;
     }
 }

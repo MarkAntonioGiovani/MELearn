@@ -12,9 +12,11 @@ import com.example.melearn.gui.DeckFragment;
 import com.example.melearn.gui.HomeFragment;
 import com.example.melearn.gui.SettingsFragment;
 import com.example.melearn.gui.SocialFragment;
+import com.example.melearn.logic.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    public static User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, startFragment).commit();
         bottomNav.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        user = new User("test");
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
