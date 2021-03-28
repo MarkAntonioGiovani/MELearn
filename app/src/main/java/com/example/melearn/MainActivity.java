@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.melearn.gui.AddFragment;
-import com.example.melearn.gui.DeckFragment;
+import com.example.melearn.gui.MyDecksFragment;
 import com.example.melearn.gui.HomeFragment;
 import com.example.melearn.gui.SettingsFragment;
 import com.example.melearn.gui.SocialFragment;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new AddFragment();
                             break;
                         case R.id.nav_deck:
-                            selectedFragment = new DeckFragment();
+                            selectedFragment = new MyDecksFragment();
                             break;
                         case R.id.nav_settings:
                             selectedFragment = new SettingsFragment();

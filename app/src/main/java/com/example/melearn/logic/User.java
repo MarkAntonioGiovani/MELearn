@@ -45,4 +45,8 @@ public class User {
     }
 
 
+    public List<Deck> getDecks() {
+        return this.decks;
+    }
+
 }

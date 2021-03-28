@@ -20,7 +20,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/cambay"
-        android:text="@string/add_a_deck"
+        android:text="New Card"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -32,7 +32,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtVwName"
+            android:id="@+id/txtVwFront"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -43,28 +43,29 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edTxtName"
+            android:id="@+id/edTxtFront"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_height="80dp"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
-            android:hint="@string/deckname_required"
-            android:inputType="textPersonName" />
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/description_for_your_deck_this_is_optional"
+            android:inputType="textMultiLine" />
 
         <TextView
-            android:id="@+id/txtVwDescription"
+            android:id="@+id/txtVwBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/description"
+            android:text="@string/back"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edTxtDescription"
+            android:id="@+id/edTxtBack"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginRight="30dp"
@@ -78,7 +79,7 @@
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_deck"
+            android:text="@string/add_card"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"/>

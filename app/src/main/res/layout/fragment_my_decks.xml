@@ -12,7 +12,7 @@
         android:theme="?attr/actionBarTheme" />
 
     <TextView
-        android:id="@+id/txtVwHeader"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -20,19 +20,23 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/cambay"
-        android:text="NAME"
+        android:text="Deck"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
-        
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_below="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_card"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"/>
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/deck_container"
+        android:paddingHorizontal="10dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+    </LinearLayout>
+
+    </ScrollView>
 </RelativeLayout>

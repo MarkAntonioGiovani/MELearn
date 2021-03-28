@@ -10,6 +10,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.melearn.MainActivity;
 import com.example.melearn.R;
@@ -31,8 +32,13 @@ public class AddFragment extends Fragment {
         buttonAdd.setOnClickListener(v -> {
             MainActivity.user.addDeck(deckNameInput.getText().toString(),
                     deckDescriptionInput.getText().toString());
-            System.out.println(deckDescriptionInput.getText().toString());
+            Fragment deckFragment = new DeckFragment(MainActivity.user.getDecks().get(MainActivity.user.getDecks().size()-1));
+
+            FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, deckFragment);
+            fragmentTransaction.commit();
         });
+
         return view;
     }
 }

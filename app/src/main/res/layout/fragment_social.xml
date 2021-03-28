@@ -20,7 +20,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/cambay"
-        android:text="Social"
+        android:text="@string/social"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
